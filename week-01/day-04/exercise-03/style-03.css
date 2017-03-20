@@ -1,0 +1,22 @@
+p {
+font-family: 'Roboto', sans-serif;
+font-size: 36px;
+text-align: center;
+color: #fff;
+width:348px;
+height:128px;
+line-height: 128px;
+margin: 0;
+}
+.north {
+  background-color: rgb(230, 118, 118);
+  margin-bottom: 4px;
+}
+.south {
+background-color: rgb(169, 230, 230);
+}
+div {
+width:348px;
+height:256px;
+border: 15px solid rgb(66, 133, 244);
+}

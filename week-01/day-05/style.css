@@ -1,0 +1,102 @@
+header{
+background-image: url(anakin.png);
+background-size: cover;
+height: 405px;
+margin-top:-10px;
+border-top-style:solid;
+border-top-width: 6px;
+border-top-color:#222;
+position:relative;
+margin-left:auto;
+margin-right:auto;
+text-align: center;
+width:85%;
+}
+
+span{
+  height:100%;
+  display:block;
+  vertical-align: center;
+  position: absolute;
+  color: #222;
+  white-space: nowrap;
+}
+
+#row1{
+  margin:225px 290px;
+  font-size: 115%;
+  font-weight: lighter;
+}
+
+#row2{
+  margin:255px 290px;
+  font-size: 225%;
+  font-weight: lighter;
+}
+
+.narrow{
+  padding-top:40px;
+  width:45%;
+  margin: auto;
+  line-height: 30px;
+  color:#222;
+}
+article{
+  font-family: 'Josefin Sans', sans-serif;
+  color:#222;
+  font-size: 20px;
+}
+
+h1{
+    font-family: 'Abril Fatface', cursive;
+}
+
+h2{
+  text-transform: uppercase;
+  font-size: 22px;
+  padding-bottom: 30px;
+}
+h3{
+  font-weight: bold;
+  line-height: 2px;
+}
+
+#twoline{
+  line-height:normal;
+}
+
+
+h4{
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 50%;
+}
+blockquote{
+  color:#fff;
+  background-color: rgb(68, 68, 68);
+  background-size: cover;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 47px;
+  margin-left:-40px;
+  width: 110%;
+  height:110px;
+  line-height: 60px;
+  text-align: left;
+  padding:45px 20px 20px 60px;
+}
+
+blockquote:before{
+  content:'\201C';
+  font-size:146px;
+  margin-top:-15px;
+  margin-left:-60px;
+  position:absolute;
+  display:block;
+}
+
+.personal{
+  border-top-color:#222;
+  border-top-width:thick;
+  border-top-style: solid;
+}

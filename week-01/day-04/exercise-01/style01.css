@@ -1,0 +1,12 @@
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size:36px;
+  color: rgb(0, 85, 102);
+  padding: 20px 15px;
+  margin: 27px;
+  width: 335px;
+  height:110px;
+  border:5px solid rgb(125, 206, 148);
+  background-color:rgb(14, 145, 161);
+
+}
