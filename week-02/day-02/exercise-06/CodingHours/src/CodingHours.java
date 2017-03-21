@@ -11,7 +11,7 @@ public class CodingHours {
     double averageWorkingHoursPerSemester = semesterWeeks * averageWorkingHoursPerWeek;
 
     System.out.println(codingHoursPerSemester );
-    System.out.println(codingHoursPerSemester / averageWorkingHoursPerSemester * 100 );
+    System.out.println(codingHoursPerSemester / averageWorkingHoursPerSemester * 100 + "%" );
     // An average Green Fox attendee codes 6 hours daily
     // The semester is 17 weeks long
     //
