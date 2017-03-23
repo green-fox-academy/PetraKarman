@@ -1,7 +1,9 @@
 /**
  * Created by Petra on 2017. 03. 22..
  */
+
 import java.util.Scanner;
+
 public class Diamond {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
@@ -22,10 +24,10 @@ public class Diamond {
       for (int k = 0; k < (2 * i + 1); k++) {
         System.out.print("*");
       }
-      if(odd && i == halfInput-2) i++;
+      if (odd && i == halfInput - 2) i++;
       System.out.println();
     }
-    for (int i = halfInput-1; i >= 0; i--) {
+    for (int i = halfInput - 1; i >= 0; i--) {
       for (int j = 1; j < userInput - i; j++) {
         System.out.print(" ");
       }
@@ -35,14 +37,10 @@ public class Diamond {
 
       System.out.println();
 
-      }
-
     }
+
   }
-
-
-
-
+}
 
 
 // Write a program that reads a number from the standard input, then draws a
