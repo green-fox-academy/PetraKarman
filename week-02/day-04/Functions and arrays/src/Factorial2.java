@@ -12,7 +12,7 @@ public class Factorial2 {
     System.out.println(factorio2(userInput));
   }
 
-  public static int factorio2(int input) {
+  private static int factorio2(int input) {
     if (input == 1)
       return 1;
     else

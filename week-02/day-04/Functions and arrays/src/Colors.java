@@ -30,3 +30,7 @@ public class Colors {
 //   `"orange red", "red", "tomato"`
 // - In `colors[2]` store the shades of pink:
 //   `"orchid", "violet", "pink", "hot pink"`
+
+// for (String color: colors){
+// System.out.println(color);
+// }
