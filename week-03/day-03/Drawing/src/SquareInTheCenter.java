@@ -8,7 +8,7 @@ public class SquareInTheCenter {
 
   public static void mainDraw(Graphics graphics){
     graphics.setColor(Color.GREEN);
-    graphics.fillRect(150, 150, 10, 10);
+    graphics.fillRect(145, 145, 10, 10);
   }
 
   //    Don't touch the code below
