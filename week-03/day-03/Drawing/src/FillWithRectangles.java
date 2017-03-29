@@ -2,13 +2,19 @@ import javax.swing.*;
 import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-// draw a green 10x10 square to the canvas' center.
+// draw four different size and color rectangles.
 
-public class SquareInTheCenter {
+public class FillWithRectangles {
 
-  public static void mainDraw(Graphics graphics){
-    graphics.setColor(Color.GREEN);
-    graphics.fillRect(150, 150, 10, 10);
+  public static void mainDraw(Graphics graphics) {
+    graphics.setColor(Color.MAGENTA);
+    graphics.fillRect(10, 30, 40, 40);
+    graphics.setColor(Color.CYAN);
+    graphics.fillRect(40, 90, 20, 40);
+    graphics.setColor(Color.ORANGE);
+    graphics.fillRect(170, 200, 75, 35);
+    graphics.setColor(Color.PINK);
+    graphics.fillRect(220, 130, 50, 30);
   }
 
   //    Don't touch the code below
@@ -20,7 +26,8 @@ public class SquareInTheCenter {
     jFrame.setLocationRelativeTo(null);
     jFrame.setVisible(true);
   }
-  static class ImagePanel extends JPanel{
+
+  static class ImagePanel extends JPanel {
     @Override
     protected void paintComponent(Graphics graphics) {
       super.paintComponent(graphics);
