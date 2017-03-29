@@ -3,30 +3,35 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-// reproduce this:
-// [https://github.com/greenfox-academy/teaching-materials/blob/master/exercises/drawing/purple-steps-3d/r4.png]
+// fill the canvas with a checkerboard pattern.
 
-public class PurpleSteps3D {
+public class Checkerboard {
 
   public static void mainDraw(Graphics graphics) {
-
-    int x = 10;
-    int y = 10;
-    int a = 10;
-    int p = 0;
-    Color color = new Color(177, 70, 244);
-    for (int i = 0; i < 6; i++) {
-      graphics.setColor(Color.black);
-      graphics.fillRect(x, y, a, a);
-      graphics.setColor(color);
-      graphics.fillRect(x + 1, y + 1, a - 2, a - 2);
-      p = p + 10;
-      a = a + 10;
-      x = x + p;
-      y = y + p;
+    int x = 0;
+    int y = 0;
+    for (int i = 0; i <= 15; i++) {
+      x = 0;
+      for (int j = 0; j <= 15; j++) {
+        graphics.setColor(Color.BLACK);
+        graphics.fillRect(x, y, 10, 10);
+        x = x + 20;
+      }
+      y = y + 20;
+    }
+    y = 10;
+    for (int i = 0; i <= 15; i++) {
+      x = 10;
+      for (int j = 0; j <= 15; j++) {
+        graphics.setColor(Color.BLACK);
+        graphics.fillRect(x, y, 10, 10);
+        x = x + 20;
+      }
+      y = y + 20;
     }
 
   }
+
 
   //    Don't touch the code below
   public static void main(String[] args) {
