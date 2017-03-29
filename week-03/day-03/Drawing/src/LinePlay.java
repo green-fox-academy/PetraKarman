@@ -8,37 +8,21 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class LinePlay {
   public static void mainDraw(Graphics graphics) {
-    int a = 0;
-    int b = 0;
-    for (int i = 0; i < 15; i++) {
-      a = a + 20;
-      drawingFunction(a, b, graphics);
-    }
-    for (int i = 0; i < 15; i++) {
-      b = b + 20;
-      drawingFunction(a, b, graphics);
-    }
-    for (int i = 0; i < 15; i++) {
-      a = a - 20;
-      drawingFunction2(a, b, graphics);
-    }
-    for (int i = 0; i < 15; i++) {
-      b = b - 20;
-      drawingFunction2(a, b, graphics);
+    for (int i = 0; i < 300; i += 20) {
+      drawingFunction(i, graphics);
     }
   }
 
-  private static void drawingFunction(int x, int y, Graphics graphics) {
-    graphics.drawLine(x, y, 30, 0);
-    graphics.drawLine(x, y, 295, 290);
+  private static void drawingFunction(int diff, Graphics graphics) {
+    Color color = new Color(177, 70, 244);
+    graphics.setColor(color);
+    graphics.drawLine(diff, 0, 300, diff);
+    graphics.setColor(Color.GREEN);
+    graphics.drawLine(0, diff, diff, 300);
   }
-  private static void drawingFunction2(int x, int y, Graphics graphics) {
-    graphics.drawLine(x, y, 0, 30);
-    graphics.drawLine(x, y, 290, 300);
-  }
-
 
   //    Don't touch the code below
+
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
     jFrame.setSize(new Dimension(300, 300));
