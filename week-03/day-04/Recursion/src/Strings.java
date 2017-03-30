@@ -6,16 +6,16 @@ public class Strings {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Write something that contains the letter x: ");
     String userInput = scanner.nextLine();
-    System.out.println(replace(userInput));
+    System.out.println(changeXY(userInput));
   }
 
-  private static String replace(String sentence) {
-    if (sentence.contains("x")) {
-      return sentence.replace("x", "y");
+  private static String changeXY(String sentence) {
+    if (sentence.length() == 0) {
+      return "";
+    } else if (sentence.charAt(0) == 'x') {
+      return 'y' + (changeXY(sentence.substring(1)));
     } else {
-      return sentence;
+      return sentence.charAt(0) + (changeXY(sentence.substring(1)));
     }
   }
 }
-// Given a string, compute recursively (no loops) a new string where all the
-// lowercase 'x' chars have been changed to 'y' chars.
