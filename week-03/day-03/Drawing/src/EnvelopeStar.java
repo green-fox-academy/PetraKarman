@@ -11,7 +11,7 @@ public class EnvelopeStar {
 
 
   public static void mainDraw(Graphics graphics) {
-    for (int i = 0; i <= 150; i += 10) {
+    for (int i = 0; i < 150; i += 10) {
       drawingFunction(i, graphics);
     }
   }
@@ -20,7 +20,7 @@ public class EnvelopeStar {
     graphics.setColor(Color.GREEN);
     graphics.drawLine(150, diff, (150-diff), 150);
     graphics.drawLine(150, diff, (diff + 150), 150);
-    graphics.drawLine(diff, 150, 150, (diff + 150));
+    graphics.drawLine(150, (300-diff), (150-diff), 150);
     graphics.drawLine(150, (300-diff), (diff+150), 150);
   }
 
