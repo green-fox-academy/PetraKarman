@@ -6,14 +6,16 @@ public class StringsAgain {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Write something that contains the letter x: ");
     String userInput = scanner.nextLine();
-    System.out.println(remove(userInput));
+    System.out.println(removeX(userInput));
   }
 
-  private static String remove(String sentence) {
-    if (sentence.contains("x")) {
-      return sentence.replace("x", "");
+  private static String removeX(String sentence) {
+    if (sentence.length() == 0) {
+      return "";
+    } else if (sentence.charAt(0) == 'x') {
+      return "" + (removeX(sentence.substring(1)));
     } else {
-      return sentence;
+      return sentence.charAt(0) + (removeX(sentence.substring(1)));
     }
   }
 }
