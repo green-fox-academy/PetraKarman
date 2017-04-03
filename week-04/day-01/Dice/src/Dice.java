@@ -1,16 +1,17 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class Dice {
-  //    You have a Dice class which has 6 dice
+//    You have a Dice class which has 6 dice
 //    You can roll all of them with roll()
 //    Check the current rolled numbers with getCurrent()
 //    You can reroll with reroll()
 //    Your task is to get where all dice is a 6
+
+public class Dice {
+
   int[] dices = new int[6];
 
-  public int[] roll(){
+  public int[] roll() {
     for (int i = 0; i < dices.length; i++) {
       dices[i] = (int) (Math.random() * 6) + 1;
     }
@@ -26,7 +27,7 @@ public class Dice {
   }
 
   public void printDice() {
-    for(int i = 0; i < dices.length; i++) {
+    for (int i = 0; i < dices.length; i++) {
       System.out.print(dices[i] + " ");
     }
     System.out.println();
@@ -34,8 +35,8 @@ public class Dice {
 
   public List<Integer> getNonSixes() {
     List<Integer> nonSixes = new ArrayList<>();
-    for(int i = 0; i < dices.length; i++) {
-      if(dices[i] != 6) nonSixes.add(i);
+    for (int i = 0; i < dices.length; i++) {
+      if (dices[i] != 6) nonSixes.add(i);
     }
     return nonSixes;
   }
@@ -53,12 +54,12 @@ public class Dice {
   public static void main(String[] args) {
     Dice myDice = new Dice();
     myDice.roll();
-    while(myDice.getNonSixes().size() != 0) {
+    while (myDice.getNonSixes().size() != 0) {
       myDice.printDice();
       for (int i = 0; i < myDice.getNonSixes().size(); i++) {
         myDice.reroll(myDice.getNonSixes().get(i));
       }
     }
-    myDice.printDice(); 
+    myDice.printDice();
   }
 }
