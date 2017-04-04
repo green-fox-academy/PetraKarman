@@ -14,8 +14,11 @@ public class CoolGreenFoxApp {
     myPerson.introduce();
     */
 
-   Mentor myMentor = new Mentor();
-   myMentor.introduce();
+   //Mentor myMentor = new Mentor();
+  // myMentor.introduce();
+    Sponsor mySponsor = new Sponsor();
+    mySponsor.introduce();
+    mySponsor.getGoal();
 
 
   }
