@@ -8,16 +8,20 @@ public class Character extends GameObject {
   }
 
   public void moveUp() {
+    this.setPosY(getPosY() - 1);
   }
 
   public void moveDown() {
+    this.setPosY(getPosY() + 1);
+
   }
 
   public void moveRight() {
+    this.setPosX(getPosX() + 1);
   }
 
   public void moveLeft() {
+    this.setPosX(getPosX() - 1);
   }
-
 
 }
