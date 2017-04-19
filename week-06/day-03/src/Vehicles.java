@@ -39,16 +39,16 @@ public class Vehicles {
 
   @Override
   public String toString() {
-    String temp = "";
+    String typesAndSums = "";
     for (int i = 0; i < CarType.values().length; i++) {
-      temp += CarType.values()[i].name() + " " + sumTypes(CarType.values()[i]) + "\n";
+      typesAndSums += CarType.values()[i].name() + " " + sumTypes(CarType.values()[i]) + "\n";
     }
-    String temp2 = "";
+    String colorsAndSums = "";
     for (int i = 0; i < CarColor.values().length; i++) {
-      temp2 += CarColor.values()[i].name() + " " + sumColors(CarColor.values()[i]) + "\n";
+      colorsAndSums += CarColor.values()[i].name() + " " + sumColors(CarColor.values()[i]) + "\n";
     }
 
-    return temp + "\n" + temp2;
+    return typesAndSums + "\n" + colorsAndSums;
 
   }
 }
