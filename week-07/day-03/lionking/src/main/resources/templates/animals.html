@@ -8,6 +8,7 @@
 <body>
 <table>
     <tr data-th-each="bankaccount : ${animals}">
+        <td data-th-text="${bankaccountStat.index + 1}">...</td>
         <td data-th-text="${bankaccount.name}">...</td>
         <td data-th-text="${#numbers.formatDecimal(bankaccount.balance, 1, 2)}">...</td>
         <td data-th-text="${bankaccount.animalType}">...</td>
