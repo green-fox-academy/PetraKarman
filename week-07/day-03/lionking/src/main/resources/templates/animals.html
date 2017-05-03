@@ -2,18 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Thymeleaf Exercise #</title>
-    <link rel="stylesheet" th:href="@{/style.css}" />
-    <meta charset="utf-8" />
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="utf-8"/>
 </head>
 <body>
-<table>
-    <tr data-th-each="bankaccount : ${animals}">
-        <td data-th-text="${bankaccountStat.index + 1}">...</td>
-        <td data-th-text="${bankaccount.name}">...</td>
-        <td data-th-text="${#numbers.formatDecimal(bankaccount.balance, 1, 2)}">...</td>
-        <td data-th-text="${bankaccount.animalType}">...</td>
-    </tr>
-</table>
+<p th:each="bankaccount : ${animals}">
+        <span th:class="(${bankaccount.name} == 'Mufasa') ? isKing : notAKing ">
+        <span th:text="${bankaccountStat.index + 1}">...</span>
+        <span th:text="${bankaccount.name}">...</span>
+        <span th:text="${#numbers.formatDecimal(bankaccount.balance, 1, 2)}">...</span>
+        <span th:text="${bankaccount.animalType}">...</span>
+    </span>
+
+</p>
 
 </body>
 </html>

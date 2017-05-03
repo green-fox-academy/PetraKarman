@@ -16,12 +16,14 @@ public class BankAccounts {
       BankAccount pumbaa = new BankAccount("Pumbaa", 300, "warthog" );
       BankAccount timon = new BankAccount("Timon", 200, "meerkat");
       BankAccount rafiki = new BankAccount("Rafiki", 0, "mandrill");
+      BankAccount scar = new BankAccount("Scar", 0, "lion");
       ArrayList animals = new ArrayList();
       animals.add(simba);
       animals.add(mufasa);
       animals.add(pumbaa);
       animals.add(timon);
       animals.add(rafiki);
+      animals.add(scar);
       model.addAttribute("animals",animals);
       return "animals";
     }
