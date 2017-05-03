@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Exercise #</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<table>
+    <tr data-th-each="bankaccount : ${animals}">
+        <td data-th-text="${bankaccount.name}">...</td>
+        <td data-th-text="${#numbers.formatDecimal(bankaccount.balance, 1, 2)}">...</td>
+        <td data-th-text="${bankaccount.animalType}">...</td>
+    </tr>
+</table>
+
+</body>
+</html>
