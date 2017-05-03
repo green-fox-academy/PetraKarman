@@ -13,4 +13,6 @@ public class BankController {
     model.addAttribute("simba", simba);
     return "BankAccount";
   }
+
 }
+
