@@ -1,7 +1,7 @@
 package com.greenfoxacademy;
 
 
-public class HelloWorld {
+public class HelloWorld{
   private String message;
 
   public void setMessage(String message){
