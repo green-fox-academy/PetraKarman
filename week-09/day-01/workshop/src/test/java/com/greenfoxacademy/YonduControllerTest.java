@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @SpringBootTest(classes = WorkshopApplication.class)
 @WebAppConfiguration
 @EnableWebMvc
-public class GuardianControllerTest {
+public class YonduControllerTest {
 
   private MockMvc mockMvc;
 
@@ -34,19 +34,19 @@ public class GuardianControllerTest {
   public void setup() throws Exception {
     this.mockMvc = webAppContextSetup(webApplicationContext).build();
   }
-
   @Test
   public void WithParameterStatusIsOk() throws Exception{
-    mockMvc.perform(get("/groot?message=somemessage"))
+    mockMvc.perform(get("/yondu?distance=100&time=10"))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$.received").value("somemessage"))
-            .andExpect(jsonPath("$.translated").value("I am Groot!"));
+            .andExpect(jsonPath("$.distance").value(100))
+            .andExpect(jsonPath("$.time").value(10))
+            .andExpect(jsonPath("$.speed").value(10));
   }
   @Test
   public void withoutParameter() throws Exception{
-    mockMvc.perform(get("/groot"))
+    mockMvc.perform(get("/yondu"))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$.error").value("I am Groot!"));
-
+            .andExpect(jsonPath("$.error").value("Please provide distance and time."));
   }
 }
+
