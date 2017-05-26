@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title> Name your animal </title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<form th:action="@{/namedAnimal/__${id}__}" th:object="${animal}" method="post">
+    <span>Give a nice name</span>
+    <input type="text" name="name" required = "required"/>
+    <input type="submit" value="Give name"/>
+
+</form>
+</body>
+</html>

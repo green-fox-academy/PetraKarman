@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Animal Club</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<ul>
+    <li><a href="/"> Main Page </a></li>
+    <li><a href="/index"> Information </a></li>
+    <li><a href="/nutritionStore"> Nutrition Store </a></li>
+    <li><a href="/trickCenter"> Trick Center</a></li>
+</ul>
+<img th:src="@{${animal.animalType.image}}"/>
+<p th:text="'This is ' + ${animal.name} + ', a ' + ${animal.animalType.type} + '.'  + ' Currently living on ' + ${animal.drink.type} + ' and ' + ${animal.food.type} + '. ' +  ${animal.name} + ' knows ' + ${animal.tricks.size()} + ' tricks.'"/>
+<h1> Your known tricks </h1>
+<span th:if="${animal.tricks.size() == 0}">You know no tricks, yet. Go and learn some.</span>
+<span th:if="${animal.tricks.size() > 0}">
+      <ul>
+        <li th:each="trick : ${animal.tricks}" th:text="${trick.type}"> </li>
+      </ul>
+    </span>
+
+
+</body>
+</html>

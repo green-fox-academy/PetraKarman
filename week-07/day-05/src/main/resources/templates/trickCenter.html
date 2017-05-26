@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Trick Center</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="utf-8" />
+</head>
+<body>
+<ul>
+    <li> <a href="/"> Main Page </a></li>
+    <li> <a href="/index"> Information </a></li>
+    <li> <a href="nutritionStore"> Nutrition Store </a></li>
+    <li> <a href="trickCenter"> Trick Center</a> </li>
+</ul>
+<span th:if="${tricklist.size() > 0}">
+<form th:action="@{/learnTrick}" th:object="${animal}" method="post">
+    <span>Tricks</span>
+    <select name="trick">
+        <option th:each="trick : ${tricklist}" th:unless="${#lists.contains(animal.tricks, trick)}"
+                th:text="${trick.getType()}"
+                th:value="${trick.getId()}"
+        ></option>
+    </select>
+    <button type="submit" value="Change" >Learn</button>
+
+</form>
+</span>
+<span th:if="${tricklist.size()== animal.tricks.size()}">No more tricks to learn.</span>
+</body>
+</html>

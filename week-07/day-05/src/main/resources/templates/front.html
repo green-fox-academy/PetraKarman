@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Animal Creator</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<h1> Visit your animal</h1>
+<form th:action="@{/index}" th:object="${animal}" method="post">
+    <span>Your animal's name</span>
+    <input type="text" name="name" required = "required"/>
+    <input type="submit" value="Go"/>
+</form>
+<p th:if = "${nameExists} == false"> Animal doesn't exists. </p>
+
+<h1> Create your animal </h1>
+<a href="/create?id=0"> <img th:src="@{pingu.png}"/>
+</a>
+<a href="/create?id=1"> <img th:src="@{seal.jpg}"/>
+</a>
+<a href="/create?id=2"> <img th:src="@{reindeer.jpg}"/>
+</a>
+<a href="/create?id=3"> <img th:src="@{polar.jpg}"/>
+</a>
+<a href="/create?id=4"> <img th:src="@{panda.png}"/>
+</a>
+<a href="/create?id=5"> <img th:src="@{mate.jpg}"/>
+</a>
+
+</body>
+</html>
