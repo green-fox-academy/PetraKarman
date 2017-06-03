@@ -5,8 +5,8 @@ public class Reservation implements Reservationy {
   private String dow;
 
   public Reservation() {
-    code = getCodeBooking();
-    dow = getDowBooking();
+    this.code = getCodeBooking();
+    this.dow = getDowBooking();
   }
 
   @Override
