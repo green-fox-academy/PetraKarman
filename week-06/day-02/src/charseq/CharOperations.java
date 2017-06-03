@@ -1,4 +1,4 @@
-package main.java.music;
+package charseq;
 
 public class CharOperations implements CharSequence {
   String string;
