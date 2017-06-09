@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Calorie Counter</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+<h1> Meals: </h1>
+<form action="/add">
+  <input type="submit" value="Add meal"/>
+  <br/>
+  <span th:text="'Total calories: ' + ${calorieCounter}" />
+  <br/>
+  <span th:text="'Number of meals: ' + ${#lists.size(meals)}"/>
+</form>
+<table border="1">
+  <tr>
+    <th>Date</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Calories</th>
+  </tr>
+  <tr th:each="meal : ${meals}">
+    <td th:text="${meal.mealDate}"></td>
+    <td th:text="${meal.type.name}"></td>
+    <td th:text="${meal.description}"></td>
+    <td th:text="${meal.calories}"></td>
+    <td>
+      <form th:action="@{/deleteMeal/__${meal.id}__}">
+        <input type="submit" value="Delete meal"/>
+      </form>
+    </td>
+    <td>
+      <form th:action="@{/add/__${meal.id}__}">
+        <input type="submit" value="Edit meal"/>
+      </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Add meal</title>
+</head>
+<body>
+<span th:text="${errormessage != null} ? ${errormessage}"/>
+<form th:action="${mealtoedit != null} ? @{/saveMeal/__${mealtoedit?.id}__}:@{/saveMeal}">
+  <input type="date" name="date" th:value="${mealtoedit != null} ? ${mealtoedit.mealDate}"/>
+  <select name="type">
+    <option th:each="type : ${types}"
+            th:text="${type.name}"
+            th:value="${type.name}" th:selected="${mealtoedit != null and type.name == mealtoedit.type.name} ? true : false "/>
+  </select>
+  <input type="text" name="description" th:value="${mealtoedit != null} ? ${mealtoedit.description}" placeholder="what did you eat?"/>
+  <input type="number" name="calories" th:value="${mealtoedit != null} ? ${mealtoedit.calories}" placeholder="calories"/>
+  <input type="submit" value="save"/>
+</form>
+<form action="/index">
+  <input type="submit" value="cancel"/>
+</form>
+</body>
+</html>

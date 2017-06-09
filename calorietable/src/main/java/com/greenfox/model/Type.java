@@ -16,13 +16,7 @@ import javax.persistence.Table;
 public class Type {
   @Id
   String name;
-}
 
-/*
-Breakfast
-Elevenses
-Lunch
-Snack
-Dinner
-Midnight Snack
- */
+  public Type() {
+  }
+}
