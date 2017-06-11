@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>URL shortener</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+<h1> Welcome to Petra's URL Shortener! </h1>
+<p> Are you sick of posting URLs in emails only to have it break when sent causing the recipient to have to cut and past it back together?blablabla</p>
+
+<form th:action="@{/save}" th:object="${url}" method="post">
+  <span>Enter a long url: </span>
+  <input type="text" name="url" required = "required"/>
+  <input type="submit" value="Convert URL"/>
+</form>
+</body>
+</html>

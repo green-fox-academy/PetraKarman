@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>URL shortener</title>
+  <meta charset="utf-8"/>
+</head>
+  <body>
+    <h1>Below you can find your old and new urls! </h1>
+      <p th:text="${url.original}"/>
+      <a th:href="@{/shorten/__${url.shortCut}__}" th:text="'localhost:8080/shorten/' + ${url.shortCut}"/>
+      <a href="/index"> back to first page </a>
+  </body>
+</html>
